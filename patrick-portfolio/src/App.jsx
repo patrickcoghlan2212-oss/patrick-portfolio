@@ -7,7 +7,7 @@ function App() {
       {/* NAVIGATION BAR */}
       <header className="navbar">
         <div className="logo">
-          YOURNAME
+          PATRICK COGHLAN
         </div>
 
         <nav className="nav-links">
@@ -18,8 +18,6 @@ function App() {
         </nav>
       </header>
 
-
-      {/* HERO / FIRST THING PEOPLE SEE */}
       <main>
 
         <section id="home" className="hero">
@@ -31,13 +29,15 @@ function App() {
             </p>
 
             <h1>
-              Hi, I'm <span>Your Name.</span>
+              Hi, I'm <span>Pat.</span>
             </h1>
 
             <p className="hero-description">
-              I build websites, applications and games.
-              This website is where I showcase the things
-              I'm working on.
+              I am a software developer with a passion for building websites, applications and games.
+            </p>
+
+            <p className="hero-description">
+              This website is where I showcase the things I'm working on.
             </p>
 
             <div className="hero-buttons">
@@ -75,6 +75,14 @@ function App() {
           </h2>
 
           <p className="section-description">
+            I am a Deakin University Graduate with a 
+            Bachelor of Information Technology with a 
+            Major in Software Development and a Minor in 
+            Game Design. I have been programming for just a little over 4 years and have experience in a 
+            variety of programming languages and frameworks.
+          </p>
+
+          <p className="section-description">
             I'm interested in software development,
             web development and game development.
             I enjoy turning ideas into real projects
@@ -108,8 +116,7 @@ function App() {
               </h3>
 
               <p>
-                Put a short explanation of your project
-                here and explain what you built.
+                Project one Placeholder text. 
               </p>
 
               <div className="project-tags">
@@ -132,9 +139,7 @@ function App() {
               </h3>
 
               <p>
-                Another project can go here. Eventually
-                we'll link these cards to GitHub and
-                live demos.
+                Project two Placeholder text.
               </p>
 
               <div className="project-tags">
@@ -156,8 +161,7 @@ function App() {
               </h3>
 
               <p>
-                This could be a game, application,
-                website or university project.
+                Project three Placeholder text.
               </p>
 
               <div className="project-tags">
@@ -189,7 +193,7 @@ function App() {
 
           <a
             className="button primary-button"
-            href="mailto:your@email.com"
+            href="mailto:patrickcoghlan2212@gmail.com"
           >
             Email me
           </a>
@@ -203,7 +207,7 @@ function App() {
       <footer className="footer">
 
         <p>
-          © 2026 Your Name
+          © 2026 Patrick Coghlan. All rights reserved.
         </p>
 
         <p>
