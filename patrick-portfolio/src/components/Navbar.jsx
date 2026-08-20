@@ -1,7 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  const sections = [
+    "home",
+    "about",
+    "skills",
+    "projects",
+    "contact",
+  ];
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
@@ -11,6 +20,32 @@ function Navbar() {
     setMenuOpen(false);
   }
 
+  useEffect(() => {
+    function handleScroll() {
+      const scrollPosition = window.scrollY + 180;
+
+      let currentSection = "home";
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+
+        if (element && element.offsetTop <= scrollPosition) {
+          currentSection = section;
+        }
+      });
+
+      setActiveSection(currentSection);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header className="navbar">
       <a href="#home" className="logo" onClick={closeMenu}>
@@ -18,23 +53,43 @@ function Navbar() {
       </a>
 
       <nav className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
-        <a href="#home" onClick={closeMenu}>
+        <a
+          href="#home"
+          className={activeSection === "home" ? "active" : ""}
+          onClick={closeMenu}
+        >
           Home
         </a>
 
-        <a href="#about" onClick={closeMenu}>
+        <a
+          href="#about"
+          className={activeSection === "about" ? "active" : ""}
+          onClick={closeMenu}
+        >
           About
         </a>
 
-        <a href="#skills" onClick={closeMenu}>
+        <a
+          href="#skills"
+          className={activeSection === "skills" ? "active" : ""}
+          onClick={closeMenu}
+        >
           Skills
         </a>
 
-        <a href="#projects" onClick={closeMenu}>
+        <a
+          href="#projects"
+          className={activeSection === "projects" ? "active" : ""}
+          onClick={closeMenu}
+        >
           Projects
         </a>
 
-        <a href="#contact" onClick={closeMenu}>
+        <a
+          href="#contact"
+          className={activeSection === "contact" ? "active" : ""}
+          onClick={closeMenu}
+        >
           Contact
         </a>
       </nav>
