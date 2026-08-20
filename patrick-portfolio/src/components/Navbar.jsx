@@ -26,6 +26,10 @@ function Navbar() {
           About
         </a>
 
+        <a href="#skills" onClick={closeMenu}>
+          Skills
+        </a>
+
         <a href="#projects" onClick={closeMenu}>
           Projects
         </a>
