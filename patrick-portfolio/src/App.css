@@ -34,6 +34,9 @@
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 2px;
+
+  color: white;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -52,6 +55,64 @@
 
 .nav-links a:hover {
   color: white;
+}
+
+
+/* -------------------- */
+/* HAMBURGER BUTTON     */
+/* -------------------- */
+
+.hamburger {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 8px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: white;
+
+  border-radius: 2px;
+
+  transition:
+    transform 0.25s,
+    opacity 0.25s;
+}
+
+
+/* TURN HAMBURGER INTO X */
+
+.hamburger-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 
@@ -312,9 +373,76 @@
     padding: 20px 5%;
   }
 
-  .nav-links {
-    display: none;
+
+  /* SHOW HAMBURGER */
+
+  .hamburger {
+    display: flex;
+
+    z-index: 1001;
   }
+
+
+  /* MOBILE NAV MENU */
+
+  .nav-links {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 10px 5% 25px;
+
+    background: rgba(10, 10, 10, 0.98);
+
+    backdrop-filter: blur(10px);
+
+    border-top: 1px solid #222222;
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s,
+      transform 0.25s;
+  }
+
+
+  /* OPEN MOBILE MENU */
+
+  .nav-links.nav-open {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+
+
+  /* MOBILE NAV LINKS */
+
+  .nav-links a {
+    width: 100%;
+
+    padding: 18px 0;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #222222;
+  }
+
+
+  /* HERO */
 
   .hero {
     padding-left: 5%;
@@ -329,13 +457,26 @@
     font-size: 17px;
   }
 
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+
+  /* SECTIONS */
+
   .section {
     padding: 90px 5%;
   }
 
+
+  /* PROJECTS */
+
   .project-grid {
     grid-template-columns: 1fr;
   }
+
+
+  /* FOOTER */
 
   .footer {
     flex-direction: column;
