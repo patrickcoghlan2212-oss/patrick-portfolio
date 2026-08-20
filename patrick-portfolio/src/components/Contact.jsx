@@ -1,3 +1,6 @@
+import { SiGmail } from "react-icons/si";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 function Contact() {
   return (
     <section id="contact" className="section contact-section">
@@ -11,10 +14,15 @@ function Contact() {
       </p>
 
       <div className="contact-links">
+
         <a
           className="contact-card"
           href="mailto:patrickcoghlan2212@gmail.com"
         >
+          <div className="contact-icon">
+            <SiGmail />
+          </div>
+
           <p className="contact-type">EMAIL</p>
 
           <h3>Email me</h3>
@@ -30,6 +38,10 @@ function Contact() {
           target="_blank"
           rel="noreferrer"
         >
+          <div className="contact-icon">
+            <FaLinkedin />
+          </div>
+
           <p className="contact-type">LINKEDIN</p>
 
           <h3>Connect with me</h3>
@@ -45,6 +57,10 @@ function Contact() {
           target="_blank"
           rel="noreferrer"
         >
+          <div className="contact-icon">
+            <FaGithub />
+          </div>
+
           <p className="contact-type">GITHUB</p>
 
           <h3>View my code</h3>
@@ -53,6 +69,7 @@ function Contact() {
 
           <span>View GitHub →</span>
         </a>
+
       </div>
     </section>
   );
