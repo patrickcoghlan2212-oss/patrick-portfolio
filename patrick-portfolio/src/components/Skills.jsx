@@ -1,35 +1,10 @@
 const skillGroups = [
-  {
-    title: "Development",
-    skills: [
-      "JavaScript",
-      "React",
-      "Python",
-      "C#",
-      "HTML",
-      "CSS",
-    ],
-  },
-  {
-    title: "Game Development",
-    skills: [
-      "Unity",
-      "Game Design",
-      "Level Design",
-      "Gameplay Prototyping",
-    ],
-  },
-  {
-    title: "Tools & Platforms",
-    skills: [
-      "Git",
-      "GitHub",
-      "Vite",
-      "Supabase",
-      "Docker",
-      "VS Code",
-    ],
-  },
+  { title: "Programming", skills: ["C#", "C++", "Python", "Kotlin", "Data structures", "Algorithms"] },
+  { title: "Mobile Development", skills: ["Android", "Kotlin", "Android Studio Meerkat"] },
+  { title: "Games & VR", skills: ["Godot", "Unity", "Unity VR", "Unreal Engine 4"] },
+  { title: "3D Modelling", skills: ["Blender"] },
+  { title: "Hardware & Systems", skills: ["PCs & laptops", "Handheld devices", "Microcontrollers", "Windows", "macOS", "Linux", "IT troubleshooting"] },
+  { title: "Cybersecurity Tools", skills: ["Virtual machines", "Kali Linux"] },
 ];
 
 function Skills() {
@@ -40,8 +15,8 @@ function Skills() {
       <h2>Technologies I work with.</h2>
 
       <p className="section-description">
-        A selection of languages, frameworks and tools I use across software,
-        web and game development.
+        My technical background spans programming, Android development, game
+        engines, VR, 3D modelling and IT systems.
       </p>
 
       <div className="skills-grid">
