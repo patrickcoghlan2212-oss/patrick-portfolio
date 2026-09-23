@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 
-function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-
-  const sections = [
+const sections = [
     "home",
     "about",
     "skills",
     "projects",
+    "documents",
     "contact",
   ];
+
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
@@ -83,6 +86,15 @@ function Navbar() {
           onClick={closeMenu}
         >
           Projects
+        </a>
+
+        <a
+          href="#documents"
+          className={activeSection === "documents" ? "active" : ""}
+          aria-current={activeSection === "documents" ? "location" : undefined}
+          onClick={closeMenu}
+        >
+          Documents
         </a>
 
         <a
